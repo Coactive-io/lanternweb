@@ -1,7 +1,6 @@
 body {
 	background-color: #1A0F24;
 	font-family: "brandon-grotesque", sans-serif;
-	font-size: 18px;
 	margin: 0 auto;
 	-webkit-font-smoothing: antialiased;
 }
@@ -9,30 +8,42 @@ body {
 	padding: 0 50px;
 }
 
-/*-- Text Styles --*/
-h1 {
-	font-weight: 400;
-}
-p {
-	font-weight: 400;
-}
-a {
-	color: #fff;
-}
-/*-- End Text Styles --*/
-
-
-
-
+/*--- Global Text ---*/
+	h1 {
+		font-size: 50px;
+		font-weight: 400;
+	}
+	h2 {
+		font-size: 36px;
+	}
+	h3 {
+		font-size: 26px;
+	}
+	h4 {
+		font-size: 20px;
+	}
+	p {
+		color: #fff;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 32px;
+	}
+	a {
+		color: #fff;
+	}
+	a:hover {
+		color: #fff;
+	}
+/*-- Global Styles --*/
 
 /* Button Styles */
 	.nav-button {
-		border: 1px solid rgba(255,255,255,0.1);
+		border: 1px solid rgba(255,255,255,0.5);
 		border-radius: 18px;
 		display: inline-block;
 		line-height: 36px;
 		margin-left: 18px;
-		padding: 0 18px;
+		padding: 0 24px;
 	}
 		.nav-button:hover {
 			background-color: rgba(255,255,255,0.1);
@@ -85,7 +96,6 @@ a {
 		}
 		.content p {
 			color: rgba(255,255,255,0.5);
-			font-size: 24px;
 			margin-bottom: 48px;
 		}
 input:focus,
