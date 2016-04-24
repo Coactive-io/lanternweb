@@ -1,6 +1,7 @@
 body {
 	background-color: #1A0F24;
 	font-family: "brandon-grotesque", sans-serif;
+	font-size: 16px;
 	margin: 0 auto;
 	-webkit-font-smoothing: antialiased;
 }
@@ -215,16 +216,6 @@ button:focus {
 			opacity: 1;
 		}
 
-		/*--- footer ---*/
-		.footer {
-			margin-top: 48px;
-			text-align: center;
-		}
-		.footer p {
-			color: rgba(255,255,255,0.5);
-		}
-
-
 
 
 		/*--- buttons ---*/
@@ -258,3 +249,24 @@ button:focus {
 				background-color: #058CC4;
 			}
  
+
+
+
+
+
+
+
+
+
+
+ 		/*--- Start Footer ---*/
+
+		.footer {
+			margin-top: 48px;
+			text-align: center;
+		}
+		.footer p {
+			font-size: 18px;
+			color: rgba(255,255,255,0.5);
+		}
+
