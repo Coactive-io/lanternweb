@@ -1,34 +1,58 @@
-html {
- 
-		}
-		body {
-			font-family: "brandon-grotesque",sans-serif;
-			background-color: #1A0F24;
-			margin: 0 auto;
-			-webkit-font-smoothing:  antialiased;
-			font-size: 16px;
-		}
-		h1 {
-			font-size: 56px;
-			font-weight: 300;
-		}
-		p {
-			font-weight: 400;
-		}
-		a {
+body {
+	background-color: #1A0F24;
+	font-family: "brandon-grotesque", sans-serif;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+}
+.container {
+	padding: 0 50px;
+}
+
+/*--- Global Text ---*/
+	h1 {
+		font-size: 50px;
+		font-weight: 400;
+	}
+	h2 {
+		font-size: 36px;
+	}
+	h3 {
+		font-size: 26px;
+	}
+	h4 {
+		font-size: 20px;
+	}
+	p {
+		color: #fff;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 32px;
+	}
+	a {
+		color: #fff;
+	}
+	a:hover {
+		color: #fff;
+	}
+/*-- Global Styles --*/
+
+/* Button Styles */
+	.nav-button {
+		border: 1px solid rgba(255,255,255,0.5);
+		border-radius: 18px;
+		display: inline-block;
+		line-height: 36px;
+		margin-left: 18px;
+		padding: 0 24px;
+	}
+		.nav-button:hover {
+			background-color: rgba(255,255,255,0.1);
+			border: 1px solid rgba(255,255,255,0);
 			color: #fff;
+			text-decoration: none;
 		}
 
-
-
-
-		div.main-text p {
-			font-size: 28px;
-		}
-
-
-
-
+/* End Button Styles */
 
 		hr { 
 			background-color: #42BCB0;
@@ -45,6 +69,7 @@ html {
 		.nav {
 			padding: 48px 0;
 			margin-bottom: 12%;
+			line-height: 36px;
 
 		}
 		.left-nav {
@@ -60,20 +85,17 @@ html {
 		}
 
  
-		.solid-button {
-			background-color: #42BCB0;
-			border-radius: 18px;
-			display: inline-block;
-			line-height: 36px;
-			margin-left: 18px;
-			padding: 0 18px;
-		}
+
+
+
+
+
+
 		.content h1, p {
 			color: #fff;
 		}
 		.content p {
 			color: rgba(255,255,255,0.5);
-			font-size: 24px;
 			margin-bottom: 48px;
 		}
 input:focus,
@@ -142,17 +164,21 @@ button:focus {
 
 		.social-wrapper {
 			text-align: center;
+			padding:0;
+			margin: 0;
 		}
 
 		ul.social {
 			list-style: none;
-			padding: 0;
+			padding: 32px 0;
+			margin: 0;
 		}
 		ul.social li {
 			display: inline-block;
 	 		background-color:;
 	 		text-indent: -9999px;
 	 		margin: 0 4px;
+			vertical-align: top;
 			overflow: hidden;
 		}
 		ul.social li a.twitter, ul.social li a.facebook, ul.social li a.instagram {
@@ -197,4 +223,38 @@ button:focus {
 		.footer p {
 			color: rgba(255,255,255,0.5);
 		}
+
+
+
+
+		/*--- buttons ---*/
+		.share-btn-facebook, .share-btn-twitter {
+			border-radius: 36px;
+			display: inline-block;
+			font-size: 20px;
+			font-weight: 600;
+			line-height: 72px;
+			width: 288px;
+		}
+		.share-btn-facebook:hover, .share-btn-twitter:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		.share-btn-facebook {
+			background-color: #3B5998;
+			margin-bottom: 12px;
+		}
+			.share-btn-facebook:hover {
+				background-color: #37518C;
+			}
+
+		.share-btn-twitter {
+			background-color: #00ACED;
+
+
+		}
+			.share-btn-twitter:hover {
+				background-color: #058CC4;
+			}
  
