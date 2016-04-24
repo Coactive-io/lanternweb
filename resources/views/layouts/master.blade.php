@@ -10,10 +10,41 @@
     <script src="/js/jquery-1.11.min.js"></script>
 </head>
 <body>
-@yield('content')
-<!-- footer -->
-<div class="footer col-md-12">
-    <p>&copy; 2016 Lantern, llc. All rights reserved.</p>
-</div>
-<!-- end footer -->
+    <!-- start container -->
+    <div class="container">
+        <!-- nav -->
+        <div class="row">
+            <div class="nav">
+                <div class="right-nav col-md-6">
+                    <a href="/">Lantern</a>
+                </div>
+                <div class="left-nav col-md-6">
+                    <a class="line-button" href="#">Contact</a>
+                    <a class="nav-button" href="#">Press Kit</a>
+                </div>
+            </div>
+        </div>
+        <!-- end nav -->
+
+        @yield('content')
+    
+    </div> 
+    <!-- end container -->
+    
+    <!-- Start Footer -->
+    <div class="row">
+        <div class="footer col-md-12">
+            
+            <!-- Start Social Networks -->
+                <div class="social-wrapper col-md-12">
+                    <ul class="social">
+                        <li><a href="#" class="twitter">Twitter</a></li><li><a href="#" class="facebook">Facebook</a></li><li><a href="#" class="instagram">Instagram</a></li>
+                    </ul>
+                </div>
+            <!-- End Social Networks -->
+            
+            <p>&copy; <?php date('Y'); ?> Lantern, LLC. All rights reserved. Made with love in SATX.</p>
+        </div>
+    </div>
+    <!-- /End Footer -->
 </body>
