@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('go',function(){
-
+Route::get('phone',function(){
+    return view('phone');
 });

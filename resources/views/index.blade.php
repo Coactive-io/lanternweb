@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Lantern: Go out. Discover your city.</title>
-	<link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../../public/css/style.css">
-	<script src="https://use.typekit.net/bhl8hgd.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-</head>
-<body>
+@extends('layouts.master')
+@section('title')
+	Lantern &dash; Go out. Discover your city.
+@stop
+@section('content')
 	<!-- container -->
 	<div class="container">
 		<!-- nav -->
@@ -41,7 +35,7 @@
 					<div class="input-group">
 						<input type="text" class="form-control" placeholder="Mobile Number" style="font-size: 18px; font-weight: 500;">
 						<span class="input-group-btn">
-							<button class="btn btn-default" type="button" style="font-size: 18px; font-weight: 500;">Get Invited</button>
+							<a href="" class="btn btn-default" type="button" style="font-size: 18px; font-weight: 500;">Get Invited</a>
 						</span>
 					</div>
 				</div>
@@ -79,13 +73,8 @@
 			<!-- end social networks -->
 		</div>
 		<!-- end content -->
-
-		<!-- footer -->
-		<div class="footer col-md-12">
-			<p>&copy; 2016 Lantern, llc. All rights reserved.</p>
 		</div>
-		<!-- end footer -->
-	</div>
 	<!-- end container -->
-</body>
-</html>
+	</div>
+
+@stop
