@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Lantern &dash; Go out. Discover your city.</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/style.css">
 	<script src="https://use.typekit.net/bhl8hgd.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
