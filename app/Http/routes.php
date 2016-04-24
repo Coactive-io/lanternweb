@@ -12,9 +12,9 @@ Use App\User;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('go',function(){
-    $jamie = User::find(2);
+
 });
