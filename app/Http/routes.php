@@ -16,8 +16,12 @@ Route::get('/', function () {
 });
 
 Route::get('phone',function(){
+
     return view('phone');
 });
+
+Route::resource('user', 'UserController');
+Route::resource('place', 'PlaceController');
 
 Route::get('business',function(){
     return view('business');

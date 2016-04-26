@@ -52,6 +52,15 @@ body {
 			color: #fff;
 			text-decoration: none;
 		}
+	.btn {
+		background-color: #42BCB0;
+		color: #fff;
+		font-size: 18px;
+		font-weight: 500;
+		padding: 16px 0;
+		display: inline-block;
+		width: 100%;
+	}
 
 /* End Button Styles */
 
@@ -69,7 +78,7 @@ body {
 
 		.nav {
 			padding: 48px 0;
-			margin-bottom: 12%;
+			margin-bottom: 4%;
 			line-height: 36px;
 
 		}
@@ -269,3 +278,21 @@ button:focus {
 			color: rgba(255,255,255,0.5);
 		}
 
+
+
+
+
+
+
+
+input {
+	border-radius: 4px;
+	font-size: 18px;
+	border: 0;
+	width: 100%;
+	margin-bottom: 12px;
+	padding: 16px;
+}
+input:last-child {
+	margin: 0;
+}
