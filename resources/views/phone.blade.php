@@ -36,40 +36,35 @@
 					<p>Didn't receive our text? No sweat. Text "Help" to 555-555 to start enjoying a better night life.</p>
 				</div>
 				<!-- end main text -->
+@extends('layouts.master')
+@section('title')
+	Lantern &dash; Go out. Discover your city.
+@stop
+@section('content')
 
-				<!-- social buttons -->
-				<div class="share-buttons">
-					<div class="twitter">
-						<a href="#" class="share-btn-facebook">Share on Facebook</a>
-					</div>
+	<div class="row">
+		<div class="content col-md-offset-2 col-md-8">
+			<!-- main text -->
+			<div class="main-text">
+				<h1>Well that's the cat's meow.<br />  You're in.</h1>
+				<hr>
+				<p>Didn't receive our text? No sweat. Text "Help" to 555-555 to start enjoying a better night life.</p>
+			</div>
+			<!-- end main text -->
 
-					<div class="facebook">
-						<a href="#" class="share-btn-twitter">Share on Twitter</a>
-					</div>
+			<!-- social buttons -->
+			<div class="share-buttons">
+				<div class="twitter">
+					<a href="#" class="share-btn-facebook">Share on Facebook</a>
 				</div>
-				<!-- end social buttons -->
+
+				<div class="facebook">
+					<a href="#" class="share-btn-twitter">Share on Twitter</a>
+				</div>
 			</div>
-
+			<!-- end social buttons -->
 		</div>
-		<!-- end content -->
-
-
-		<!-- Start Footer -->
-		<div class="row">
-			<div class="footer col-md-12">
-				<!-- Start Social Networks -->
-					<div class="social-wrapper col-md-12">
-						<ul class="social">
-							<li><a href="#" class="twitter">Twitter</a></li><li><a href="#" class="facebook">Facebook</a></li><li><a href="#" class="instagram">Instagram</a></li>
-						</ul>
-					</div>
-				<!-- End Social Networks -->
-				<p>&copy; 2016 Lantern, llc. All rights reserved. Made with love in SATX.</p>
-			</div>
-		</div>
-		<!-- /End Footer -->
-
 	</div>
-	<!-- /End Container -->
-</body>
-</html>
+
+@stop
+

@@ -37,7 +37,7 @@
 					<p>Introducing a new way to enjoy your city's nightlife.<br />Get in line to gain access to exlcusive deals.</p>
 				</div>
 			</div>
-		</div> 
+		</div>
 @yield('content')
 <!-- footer -->
 <div class="footer col-md-12">

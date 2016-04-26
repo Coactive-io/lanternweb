@@ -3,18 +3,22 @@
 	Lantern &dash; Go out. Discover your city.
 @stop
 @section('content')
-		<!-- footer -->	
+		<!-- footer -->
 		<div class="row">
-				
+
 			<!-- mobile number -->
-			<div class="mobile-number col-md-8 col-md-offset-2">
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Mobile Number" style="font-size: 18px; font-weight: 500;">
-					<span class="input-group-btn">
-						<a href="" class="btn btn-default" type="button" style="font-size: 18px; font-weight: 500;">Get Invited</a>
-					</span>
+			<form action="/user" method="POST">
+
+				<input type="hidden" name="_token" value="{{ csrf_token() }}">
+				<div class="mobile-number col-md-8 col-md-offset-2">
+					<div class="input-group">
+						<input type="tel" name="phone" class="form-control" placeholder="Mobile Number" style="font-size: 18px; font-weight: 500;">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="submit" style="font-size: 18px; font-weight: 500;">Get Invited</button>
+						</span>
+					</div>
 				</div>
-			</div>
+			</form>
 
 			<!-- city table -->
 			<div class="city-table col-md-8 col-md-offset-2">
@@ -39,7 +43,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<!-- social networks -->
 			<div class="social-wrapper col-md-12">
 				<ul class="social">
