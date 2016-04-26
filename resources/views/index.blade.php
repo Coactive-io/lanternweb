@@ -2,18 +2,10 @@
 @section('title')
 	Lantern &dash; Go out. Discover your city.
 @stop
-@section('content')	
-	
-	<div class="row">
-		<div class="content col-md-offset-2 col-md-8">
-			<!-- main text -->
-			<div class="main-text">
-				<h1>Go out. Discover your city.</h1>
-				<hr>
-				<p>Introducing a new way to enjoy your city's nightlife.<br />Get in line to gain access to exlcusive deals.</p>
-			</div>
-			<!-- end main text -->
-			
+@section('content')
+		<!-- footer -->
+		<div class="row">
+
 			<!-- mobile number -->
 			<div class="mobile-number col-md-8 col-md-offset-2">
 				<div class="input-group">
@@ -23,7 +15,6 @@
 					</span>
 				</div>
 			</div>
-			<!-- end mobile number -->
 
 			<!-- city table -->
 			<div class="city-table col-md-8 col-md-offset-2">
@@ -36,8 +27,7 @@
 						<div class="progess-bar">
 						</div>
 					</div>
-				</div><!-- end city row -->
-
+				</div>
 				<div class="city-row">
 					<div class="city col-md-6">
 						<p>Austin, TX</p>
@@ -45,9 +35,14 @@
 					<div class="active col-md-6">
 						<p>Coming Soon</p>
 					</div>
-				</div><!-- end city row -->
-			<!-- end city table -->
+				</div>
+			</div>
+
+			<!-- social networks -->
+			<div class="social-wrapper col-md-12">
+				<ul class="social">
+					<li><a href="#" class="twitter">Twitter</a></li><li><a href="#" class="facebook">Facebook</a></li><li><a href="#" class="instagram">Instagram</a></li>
+				</ul>
 			</div>
 		</div>
-	</div>
 @stop

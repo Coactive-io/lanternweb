@@ -7,44 +7,43 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script src="https://use.typekit.net/pam1tgt.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
-    <script src="/js/jquery-1.11.min.js"></script>
 </head>
 <body>
-    <!-- start container -->
-    <div class="container">
-        <!-- nav -->
-        <div class="row">
-            <div class="nav">
-                <div class="right-nav col-md-6">
-                    <a href="/">Lantern</a>
-                </div>
-                <div class="left-nav col-md-6">
-                    <a class="line-button" href="#">Contact</a>
-                    <a class="nav-button" href="#">Press Kit</a>
-                </div>
-            </div>
-        </div>
-        <!-- end nav -->
+	<!-- container -->
+	<div class="container">
 
-        @yield('content')
-    
-    </div> 
-    <!-- end container -->
-    
-    <!-- Start Footer -->
-    <div class="row">
-        <div class="footer col-md-12">
-            
-            <!-- Start Social Networks -->
-                <div class="social-wrapper col-md-12">
-                    <ul class="social">
-                        <li><a href="#" class="twitter">Twitter</a></li><li><a href="#" class="facebook">Facebook</a></li><li><a href="#" class="instagram">Instagram</a></li>
-                    </ul>
-                </div>
-            <!-- End Social Networks -->
-            
-            <p>&copy; <?php date('Y'); ?> Lantern, LLC. All rights reserved. Made with love in SATX.</p>
-        </div>
-    </div>
-    <!-- /End Footer -->
+		<!-- nav -->
+		<div class="row">
+			<div class="nav">
+				<div class="right-nav col-md-6">
+					<a href="/">Lantern</a>
+				</div>
+				<div class="left-nav col-md-6">
+					<a class="line-button" href="#">Contact</a>
+					<a class="nav-button" href="/business">Got a Business?</a>
+				</div>
+			</div>
+		</div>
+
+	 	<!-- heading -->
+		<div class="row">
+			<div class="content col-md-offset-2 col-md-8">
+				<div class="main-text">
+					<img src="img/lantern-logo.svg">
+					<h1>Go out. Discover your city.</h1>
+					<hr>
+				</div>
+
+				<div class="content col-md-offset-2 col-md-8">
+					<p>Introducing a new way to enjoy your city's nightlife.<br />Get in line to gain access to exlcusive deals.</p>
+				</div>
+			</div>
+		</div>
+@yield('content')
+<!-- footer -->
+<div class="footer col-md-12">
+    <p>&copy; 2016 Lantern, llc. All rights reserved.</p>
+</div>
+<!-- end footer -->
+</div>
 </body>
