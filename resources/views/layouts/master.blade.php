@@ -16,11 +16,11 @@
 		<div class="row">
 			<div class="nav">
 				<div class="right-nav col-md-6">
-					<a href="#">Lantern</a>
+					<a href="/">Lantern</a>
 				</div>
 				<div class="left-nav col-md-6">
 					<a class="line-button" href="#">Contact</a>
-					<a class="nav-button" href="#">Press Kit</a>
+					<a class="nav-button" href="/business">Got a Business?</a>
 				</div>
 			</div>
 		</div>
@@ -29,6 +29,7 @@
 		<div class="row">
 			<div class="content col-md-offset-2 col-md-8">
 				<div class="main-text">
+					<img src="img/lantern-logo.svg">
 					<h1>Go out. Discover your city.</h1>
 					<hr>
 				</div>
