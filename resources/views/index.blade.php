@@ -23,8 +23,10 @@
 						<p>San Antonio, TX</p>
 					</div>
 					<div class="active col-md-6">
-						<p>Available</p>
-						<div class="progess-bar">
+						<p class="small">30% Spots Left</p>
+						<div class="progress-bar">
+							<div class="progress">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -33,7 +35,7 @@
 						<p>Austin, TX</p>
 					</div>
 					<div class="active col-md-6">
-						<p>Coming Soon</p>
+						<p class="small">Coming Soon</p>
 					</div>
 				</div>
 			</div>

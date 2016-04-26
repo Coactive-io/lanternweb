@@ -37,7 +37,43 @@ body {
 	}
 /*-- Global Styles --*/
 
+
+p.small {
+	color: rgba(255,255,255,0.5);
+	display: block;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 3px;
+	margin-bottom: 6px;
+	text-transform: uppercase;
+}
+
+
+
+
+/* Progress Bar */
+	.progress-bar {
+		background-color: rgba(255,255,255,0.05);
+		border-radius: 12px;
+		height: 6px;
+		width: 100%;
+		overflow: auto;
+		display: block;
+	}
+	.progress {
+		background-color: #FF9F3C;
+		border-radius: 12px;
+		height: 6px;
+		width: 50%;
+		overflow: auto;
+		display: block;
+	}
+/* End Progress Bar */
+
+
+
 /* Button Styles */
+
 	.nav-button {
 		border: 1px solid rgba(255,255,255,0.5);
 		border-radius: 18px;
@@ -54,6 +90,7 @@ body {
 		}
 	.btn {
 		background-color: #42BCB0;
+		border-radius: 100px;
 		color: #fff;
 		font-size: 18px;
 		font-weight: 500;
@@ -61,8 +98,23 @@ body {
 		display: inline-block;
 		width: 100%;
 	}
+		.btn:hover {
+			color: #fff;
+		}
 
 /* End Button Styles */
+
+
+
+
+
+
+
+
+
+
+
+
 
 		hr { 
 			background-color: #42BCB0;
@@ -157,7 +209,7 @@ button:focus {
 			border: none;
 		}
 		.city-table p {
-			font-size: 18px;
+			 
 			color: #fff;
 			margin: 0;
 			padding: 0;
