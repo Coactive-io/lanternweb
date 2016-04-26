@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "e9a68b2a370b6434f39a0a0a44216197",
+    "content-hash": "d59560ef4dcdb793fb4e95eda0eccf29",
     "packages": [
         {
             "name": "aloha/twilio",
