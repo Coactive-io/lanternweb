@@ -16,7 +16,7 @@
 		<div class="row">
 			<div class="nav">
 				<div class="right-nav col-md-6">
-					<a href="/">Lantern</a>
+					<a href="index.html">Lantern</a>
 				</div>
 				<div class="left-nav col-md-6">
 					<a class="line-button" href="#">Contact</a>
@@ -31,16 +31,10 @@
 		<div class="row">
 			<div class="content col-md-offset-2 col-md-8">
 				<div class="main-text">
-					<h1>Join your Business</h1>
-					<hr>
-					<p>Reach thousands of valued customers at anytime when yor busiess is slow.</p>
-				</div>
-				<div class="col-md-offset-2 col-md-8">
-					<input name="name" type="text" placeholder="Name">
-					<input name="email" type="text" placeholder="Email">
-					<input name="business" type="text" placeholder="Business">
-					<input name="phone" type="tel" placeholder="Phone">
-					<button name="signup" type"input" text="FUCK" class="btn">Request Spot</button>
+					<h1>We suck. Sorry.</h1>
+					<hr/>
+					<p>Oops, the page you're looking for does not exist. You may want to go back.</p>
+					<a href="/" class="nav-button">Go back home</a>
 				</div>
 			</div>
 		</div>
