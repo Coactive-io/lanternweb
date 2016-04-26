@@ -9,10 +9,40 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
+	<!-- container -->
+	<div class="container">
+
+		<!-- nav -->
+		<div class="row">
+			<div class="nav">
+				<div class="right-nav col-md-6">
+					<a href="#">Lantern</a>
+				</div>
+				<div class="left-nav col-md-6">
+					<a class="line-button" href="#">Contact</a>
+					<a class="nav-button" href="#">Press Kit</a>
+				</div>
+			</div>
+		</div>
+
+	 	<!-- heading -->
+		<div class="row">
+			<div class="content col-md-offset-2 col-md-8">
+				<div class="main-text">
+					<h1>Go out. Discover your city.</h1>
+					<hr>
+				</div>
+
+				<div class="content col-md-offset-2 col-md-8">
+					<p>Introducing a new way to enjoy your city's nightlife.<br />Get in line to gain access to exlcusive deals.</p>
+				</div>
+			</div>
+		</div> 
 @yield('content')
 <!-- footer -->
 <div class="footer col-md-12">
     <p>&copy; 2016 Lantern, llc. All rights reserved.</p>
 </div>
 <!-- end footer -->
+</div>
 </body>
