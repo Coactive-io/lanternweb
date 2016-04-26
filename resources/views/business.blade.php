@@ -19,12 +19,10 @@
 					<a href="/">Lantern</a>
 				</div>
 				<div class="left-nav col-md-6">
-					<a class="line-button" href="#">Contact</a>
-					<a class="nav-button" href="#">Press Kit</a>
+					<a class="nav-button" href="/business">Got a Business?</a>
 				</div>
 			</div>
 		</div>
-		<!-- end nav -->
 		
 
 	 	<!-- content -->
