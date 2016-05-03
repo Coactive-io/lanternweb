@@ -22,6 +22,13 @@ Route::get('phone',function(){
 
 Route::resource('user', 'UserController');
 Route::resource('place', 'PlaceController');
+Route::resource('message', 'MessageController');
+Route::controller('sms', 'InboundSmsController');
+
+Route::get('test', function(){
+   echo "yp";
+});
+
 
 Route::get('business',function(){
     return view('business');

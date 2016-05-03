@@ -28,4 +28,5 @@ class User extends Authenticatable
     public function pulse($deal){
 
     }
+
 }

@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Twilio;
-use App\Http\Requests;
-use App\User;
 
-class UserController extends Controller
+use App\Http\Requests;
+
+use App\Message;
+
+class MessageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +17,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        dd($users);
+        $messages = Message::all();
+        dd($messages);
     }
 
     /**
@@ -28,7 +29,7 @@ class UserController extends Controller
     public function create()
     {
 
-        //
+
     }
 
     /**
@@ -39,11 +40,23 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $phone = preg_replace('/\D+/', '', $request->input('phone'));
-        $user = new User;
-        $user->phone = $phone;
-        $user->save();
-        Twilio::message($phone, "You’re in. Please reply back with ‘Confirm’ to activate your place in line.");
+        $this->validate($request, [
+            'name' => 'required|unique:messages|max:255',
+            'command' => 'required',
+            'content' => 'required|max:255'
+        ]);
+
+
+        $name = $request->input('name');
+        $command = $request->input('command');
+        $content = $request->input('content');
+
+        $message  = new Message;
+        $message->name = $name;
+        $message->command = $command;
+        $message->content = $content;
+        $message->save();
+
 
     }
 
@@ -91,4 +104,6 @@ class UserController extends Controller
     {
         //
     }
+
+
 }
