@@ -51,7 +51,7 @@
 				<!-- Start Social Networks -->
 					<div class="social-wrapper col-md-12">
 						<ul class="social">
-							<li><a href="#" class="twitter">Twitter</a></li><li><a href="#" class="facebook">Facebook</a></li><li><a href="#" class="instagram">Instagram</a></li>
+							<li><a href="https://twitter.com/getlanternapp" class="twitter">Twitter</a></li><li><a href="#" class="facebook">Facebook</a></li><li><a href="https://www.instagram.com/getlanternapp" class="instagram">Instagram</a></li>
 						</ul>
 					</div>
 				<!-- End Social Networks -->
