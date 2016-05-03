@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\Helper;
 use Twilio;
 use App\Http\Requests;
 use App\User;
+
 
 class UserController extends Controller
 {
@@ -40,9 +42,12 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $phone = preg_replace('/\D+/', '', $request->input('phone'));
+        echo $phone;
+        $cleanPhone = Helper::PhoneValidator($phone);
+        echo $cleanPhone;
         $user = new User;
         $user->phone = $phone;
-        $user->save();
+        //$user->save();
         Twilio::message($phone, "You’re in. Please reply back with ‘Confirm’ to activate your place in line.");
 
     }
