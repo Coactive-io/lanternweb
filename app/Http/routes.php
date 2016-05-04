@@ -14,7 +14,7 @@ Use App\User;
 Route::get('/', function () {
     return view('index');
 });
-
+Route::post('sms', array('uses' => 'InboundSmsController@handle'));
 Route::get('phone',function(){
 
     return view('phone');
@@ -23,8 +23,8 @@ Route::get('phone',function(){
 Route::resource('user', 'UserController');
 Route::resource('place', 'PlaceController');
 Route::resource('message', 'MessageController');
-Route::controller('sms', 'InboundSmsController');
-Route::post('sms', 'InboundSmsController@handle');
+
+
 
 Route::get('test', function(){
    echo "yp";
