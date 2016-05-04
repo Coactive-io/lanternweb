@@ -10,8 +10,9 @@ class InboundSmsController extends Controller
 {
     public function handle(Request $request){
         $message = "message!";
-
-        return $this->smsResponse($message);
+        $message = $request->input('body');
+        $from  =$request->input('from');
+        return $this->smsResponse($message . $from);
     }
 
     private function smsResponse($message) {
