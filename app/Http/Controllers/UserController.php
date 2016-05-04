@@ -41,14 +41,18 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $phone = preg_replace('/\D+/', '', $request->input('phone'));
-        echo $phone;
-        $cleanPhone = Helper::PhoneValidator($phone);
-        echo $cleanPhone;
+
+        $this->validate($request, [
+            'phone' => 'required|max:20|phone'
+        ]);
+
+        $cleanPhone = Helper::PhoneValidator($request->input('phone'));
+        $existing = User::where('phone','=',$cleanPhone)->exists();
+        dd($existing);
         $user = new User;
-        $user->phone = $phone;
-        //$user->save();
-        Twilio::message($phone, "You’re in. Please reply back with ‘Confirm’ to activate your place in line.");
+        $user->phone = $cleanPhone;
+        $user->save();
+        //Twilio::message($phone, "You’re in. Please reply back with ‘Confirm’ to activate your place in line.");
 
     }
 

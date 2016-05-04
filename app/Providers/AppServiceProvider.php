@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use App\Services\Helper;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +16,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Validator::extend('phone', function($attribute, $value, $parameters, $validator) {
+            //Some conditional to evaluate...
+            if(!Helper::PhoneValidator($value)){
+                return false;
+            }else{
+                return true;
+            }
+        });
+
+
     }
 
     /**

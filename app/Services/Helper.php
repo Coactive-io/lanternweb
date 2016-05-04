@@ -9,19 +9,26 @@
 namespace App\Services;
 
 use Lookups_Services_Twilio;
+use Mockery\CountValidator\Exception;
 use Services_Twilio_RestException;
 
 
 class Helper
 {
-    public static function PhoneValidator($phone){
+    public static function PhoneValidator($phone)
+    {
         $sid = env('TWILIO_SID');
         $token = env('TWILIO_TOKEN');
         $client = new Lookups_Services_Twilio($sid, $token);
+        $phone = preg_replace('/\D+/', '', $phone);
 // Make a call to the Lookup API
-        $number = $client->phone_numbers->get($phone);
-
-// Print the nationally formatted phone number
-        return $number->national_format . "\r\n"; // => (510) 867-5309
+        try {
+            $number = $client->phone_numbers->get($phone, array("CountryCode" => "US", "Type" => "carrier"));
+            $number->carrier->type;
+            return $number->phone_number;
+        } catch(\Exception $e){
+            return false;
+        }
     }
+
 }
