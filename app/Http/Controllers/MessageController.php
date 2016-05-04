@@ -3,14 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\Helper;
-use Twilio;
+
 use App\Http\Requests;
-use App\User;
+
 use App\Message;
 
-
-class UserController extends Controller
+class MessageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,8 +17,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        dd($users);
+        $messages = Message::all();
+        dd($messages);
     }
 
     /**
@@ -31,7 +29,7 @@ class UserController extends Controller
     public function create()
     {
 
-        //
+
     }
 
     /**
@@ -42,25 +40,22 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-
         $this->validate($request, [
-            'phone' => 'required|max:20|phone'
+            'name' => 'required|unique:messages|max:255',
+            'command' => 'required',
+            'content' => 'required|max:255'
         ]);
 
-        $cleanPhone = Helper::PhoneValidator($request->input('phone'));
-        $existing = User::where('phone','=',$cleanPhone)->first();
-        if(empty($existing)){
-            //A new moth
-            $user = new User;
-            $user->phone = $cleanPhone;
-            $user->save();
-            //Twilio::message($cleanPhone, "You’re in. Please reply back with ‘Confirm’ to activate your place in line.");
-            $user->send("test");
-        } else {
-            var_dump($existing);
-        }
 
+        $name = $request->input('name');
+        $command = $request->input('command');
+        $content = $request->input('content');
 
+        $message  = new Message;
+        $message->name = $name;
+        $message->command = $command;
+        $message->content = $content;
+        $message->save();
 
 
     }
@@ -109,4 +104,6 @@ class UserController extends Controller
     {
         //
     }
+
+
 }
