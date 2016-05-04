@@ -9,6 +9,12 @@ use App\Http\Requests;
 class InboundSmsController extends Controller
 {
     public function handle(Request $request){
-        return Response::view('twiml')->header('Content-Type', 'text/xml');
+        $message = "message!";
+
+        return $this->smsResponse($message);
+    }
+
+    private function smsResponse($message) {
+        return response()->view('sms.twiml',['message'=>$message])->header('Content-Type', 'text/xml');
     }
 }
