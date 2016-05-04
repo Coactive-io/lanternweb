@@ -24,7 +24,7 @@ Route::resource('user', 'UserController');
 Route::resource('place', 'PlaceController');
 Route::resource('message', 'MessageController');
 Route::controller('sms', 'InboundSmsController');
-Route::get('sms', 'InboundSmsController@handle');
+Route::post('sms', 'InboundSmsController@handle');
 
 Route::get('test', function(){
    echo "yp";
