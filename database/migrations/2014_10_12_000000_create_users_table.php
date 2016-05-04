@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->boolean('thursday');
             $table->boolean('friday');
             $table->boolean('saturday');
+            $table->timestamp('confirmed_at');
             $table->rememberToken();
             $table->timestamps();
 

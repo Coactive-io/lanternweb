@@ -7,6 +7,7 @@ use App\Services\Helper;
 use Twilio;
 use App\Http\Requests;
 use App\User;
+use App\Message;
 
 
 class UserController extends Controller
@@ -47,12 +48,20 @@ class UserController extends Controller
         ]);
 
         $cleanPhone = Helper::PhoneValidator($request->input('phone'));
-        $existing = User::where('phone','=',$cleanPhone)->exists();
-        dd($existing);
-        $user = new User;
-        $user->phone = $cleanPhone;
-        $user->save();
-        //Twilio::message($phone, "You’re in. Please reply back with ‘Confirm’ to activate your place in line.");
+        $existing = User::where('phone','=',$cleanPhone)->first();
+        if(empty($existing)){
+            //A new moth
+            $user = new User;
+            $user->phone = $cleanPhone;
+            $user->save();
+            //Twilio::message($cleanPhone, "You’re in. Please reply back with ‘Confirm’ to activate your place in line.");
+            $user->send("test");
+        } else {
+            var_dump($existing);
+        }
+
+
+
 
     }
 
