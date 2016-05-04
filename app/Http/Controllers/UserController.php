@@ -54,7 +54,6 @@ class UserController extends Controller
             $user = new User;
             $user->phone = $cleanPhone;
             $user->save();
-            //Twilio::message($cleanPhone, "You’re in. Please reply back with ‘Confirm’ to activate your place in line.");
             $user->send("test");
         } else {
             var_dump($existing);
