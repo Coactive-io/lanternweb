@@ -1,8 +1,7 @@
 @extends('layouts.admin')
 @section('content')
     <h1>SMS Responses</h1>
-
-    <table class="table table-hover">
+    <table class="table">
         <thead>
             <tr>
                 <th>ID</th>
@@ -23,7 +22,7 @@
                     <td>{!! $m->content !!}</td>
                     <td>{!! $m->created_at !!}</td>
                     <td>{!! $m->updated_at !!}</td>
-                    <td><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+                    <td><a href="/message/{!!$m->id!!}/edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
                 </tr>
             @endforeach
         </tbody>

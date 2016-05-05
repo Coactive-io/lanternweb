@@ -31,7 +31,7 @@ class User extends Authenticatable
     }
     public function send($messageName, $userInput = null)
     {
-        $message = Message::where("name", "=", $messageName)->first();
+        $message = Message::where("command", "=", $messageName)->first();
         if(!empty($message)){
             Twilio::message($this->phone, $message->content);
             $log = new History();
