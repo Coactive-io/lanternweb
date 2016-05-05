@@ -18,7 +18,7 @@ class CreateMessagesTable extends Migration
             $table->string('command')->unique();;
             $table->string('content');
             $table->string('notes');
-            $table->boolean('response')->defaut(0)->nullable();
+            $table->boolean('response')->default(0)->nullable();
             $table->timestamps();
         });
     }
