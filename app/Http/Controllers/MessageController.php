@@ -18,7 +18,7 @@ class MessageController extends Controller
     public function index()
     {
         $messages = Message::all();
-        dd($messages);
+        return view('message.index', ['messages'=>$messages]);
     }
 
     /**
