@@ -54,9 +54,9 @@ class UserController extends Controller
             $user = new User;
             $user->phone = $cleanPhone;
             $user->save();
-            $user->send("test");
+            $user->send("welcome");
         } else {
-            var_dump($existing);
+            $existing->send("existing");
         }
 
 

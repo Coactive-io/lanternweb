@@ -28,7 +28,7 @@ class MessageController extends Controller
      */
     public function create()
     {
-
+        return view('message.create');
 
     }
 
@@ -50,14 +50,21 @@ class MessageController extends Controller
         $name = $request->input('name');
         $command = $request->input('command');
         $content = $request->input('content');
+        $response = $request->input('response');
+        $notes = $request->input('notes');
+
 
         $message  = new Message;
         $message->name = $name;
         $message->command = $command;
         $message->content = $content;
+        $message->response = $response;
+        $message->notes = $notes;
+
+
         $message->save();
 
-
+        return redirect('message');
     }
 
     /**
@@ -79,7 +86,13 @@ class MessageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $message = Message::find($id);
+        if(!empty($message)){
+            return view('message.edit', ['m'=>$message]);
+        } else{
+            return abort('404');
+        }
+
     }
 
     /**
@@ -91,7 +104,28 @@ class MessageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|unique:messages|max:255',
+            'command' => 'required',
+            'content' => 'required|max:255'
+        ]);
+
+        $message = Message::find($id);
+        $name = $request->input('name');
+        $command = $request->input('command');
+        $content = $request->input('content');
+        $response = $request->input('response');
+        $notes = $request->input('notes');
+
+
+        $message->name = $name;
+        $message->command = $command;
+        $message->content = $content;
+        $message->response = $response;
+        $message->notes = $notes;
+        $message->save();
+
+        return redirect('message');
     }
 
     /**

@@ -13,7 +13,7 @@ class InboundSmsController extends Controller
     public function handle(Request $request){
         $command = $request->input('Body');
         $from  =$request->input('From');
-        $message = Message::where('command','=', $command)->first();
+        $message = Message::where('command','=', $command)->where('response','=','1')->first();
         if(!empty($message)){
             return $this->smsResponse($message->content);
         } else {
