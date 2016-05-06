@@ -14,11 +14,17 @@ Use App\User;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('login', function () {
+    return view('login');
+});
 Route::post('sms', array('uses' => 'InboundSmsController@handle'));
 Route::get('phone',function(){
 
     return view('phone');
 });
+
+Route::get('auth/github', 'Auth\AuthController@redirectToProvider');
+Route::get('auth/github/callback', 'Auth\AuthController@handleProviderCallback');
 
 Route::resource('user', 'UserController');
 Route::resource('place', 'PlaceController');
