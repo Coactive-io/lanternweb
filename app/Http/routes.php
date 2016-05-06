@@ -25,12 +25,6 @@ Route::resource('place', 'PlaceController');
 Route::resource('message', 'MessageController');
 
 
-
-Route::get('test', function(){
-   echo "yp";
-});
-
-
 Route::get('business',function(){
-    return view('business');
+    return view('vendor.create');
 });
