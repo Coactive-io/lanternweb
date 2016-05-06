@@ -29,6 +29,8 @@ Route::get('auth/github/callback', 'Auth\AuthController@handleProviderCallback')
 Route::resource('user', 'UserController');
 Route::resource('place', 'PlaceController');
 Route::resource('message', 'MessageController');
+Route::resource('vendor', 'VendorController');
+
 
 
 Route::get('business',function(){
