@@ -31,14 +31,29 @@
 				<div class="main-text">
 					<h1>Join your Business</h1>
 					<hr>
-					<p>Reach thousands of valued customers at anytime when yor busiess is slow.</p>
+					<p>Reach thousands of valued customers at anytime when yor business is slow.</p>
 				</div>
 				<div class="col-md-offset-2 col-md-8">
-					<input name="name" type="text" placeholder="Name">
-					<input name="email" type="text" placeholder="Email">
-					<input name="business" type="text" placeholder="Business">
-					<input name="phone" type="tel" placeholder="Phone">
-					<button name="signup" type"input" text="FUCK" class="btn">Request Spot</button>
+
+					@if (count($errors) > 0)
+						<div class="alert alert-danger">
+							<ul>
+								@foreach ($errors->all() as $error)
+									<li>{{ $error }}</li>
+								@endforeach
+							</ul>
+						</div>
+					@endif
+					{{Form::open(['url'=>'/vendor'])}}
+					{{Form::text('business_name',null, ['placeholder'=>'Business Name'])}}
+					{{Form::text('business_address',null, ['placeholder'=>'Business Address'])}}
+					{{Form::text('business_desc',null, ['placeholder'=>'Business Description'])}}
+					{{Form::text('contact_name', null, ['placeholder'=>'Contact Name'])}}
+					{{Form::text('contact_phone', null, ['placeholder'=>'Contact Phone'])}}
+					{{Form::text('contact_email', null, ['placeholder'=>'Contact Email'])}}
+					{{Form::submit('Request Spot', ['class'=>'btn'])}}
+					{{Form::close()}}
+
 				</div>
 			</div>
 		</div>
