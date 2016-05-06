@@ -105,7 +105,7 @@ class MessageController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'name' => 'required|unique:messages|max:255',
+            'name' => 'required|max:255',
             'command' => 'required',
             'content' => 'required|max:255'
         ]);
