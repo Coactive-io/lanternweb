@@ -5,7 +5,7 @@
 	<title>Lantern &dash; Go out. Discover your city.</title>
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
-	<script src="https://use.typekit.net/bhl8hgd.js"></script>
+	<script src="https://use.typekit.net/pam1tgt.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
