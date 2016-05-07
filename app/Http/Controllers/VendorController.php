@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Vendor;
 use Illuminate\Http\Request;
-use App\Services\Helper;
-use Twilio;
+
 use App\Http\Requests;
-use App\User;
-use App\Message;
 
-
-class UserController extends Controller
+class VendorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,8 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        dd($users);
+
     }
 
     /**
@@ -30,7 +26,6 @@ class UserController extends Controller
      */
     public function create()
     {
-
         //
     }
 
@@ -42,26 +37,35 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-
         $this->validate($request, [
-            'phone' => 'required|max:20|phone'
+            'business_name' => 'required|max:255',
+            'business_address' => 'required|max:1000',
+            'business_desc' => 'required|max:500',
+            'contact_name' => 'required|max:255',
+            'contact_phone' => 'required|max:255',
+            'contact_email' => 'required|max:255|email',
+
         ]);
 
-        $cleanPhone = Helper::PhoneValidator($request->input('phone'));
-        $existing = User::where('phone','=',$cleanPhone)->first();
-        if(empty($existing)){
-            //A new moth
-            $user = new User;
-            $user->phone = $cleanPhone;
-            $user->save();
-            $user->send("welcome");
-        } else {
-            $existing->send("existing");
-        }
+        $vendor = new Vendor();
+        $bName = $request->input('business_name');
+        $bAddress = $request->input('business_address');
+        $bDesc = $request->input('business_desc');
+        $cName = $request->input('contact_name');
+        $cPhone = $request->input('contact_phone');
+        $cEmail = $request->input('contact_email');
 
 
+        $vendor->business_name = $bName;
+        $vendor->business_address = $bAddress;
+        $vendor->business_desc = $bDesc;
+        $vendor->contact_name = $cName;
+        $vendor->contact_phone = $cPhone;
+        $vendor->contact_email = $cEmail;
 
+        $vendor->save();
 
+        return redirect('/')->with('status', 'Application Submitted');
     }
 
     /**
