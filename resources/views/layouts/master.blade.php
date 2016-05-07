@@ -27,6 +27,11 @@
 	 	<!-- heading -->
 		<div class="row">
 			<div class="content col-md-offset-2 col-md-8">
+				@if (session('status'))
+					<div class="alert alert-success" role="alert">
+						{{session('status')}}
+					</div>
+				@endif
 				<div class="main-text">
 					<img src="img/lantern-logo.svg">
 					<h1>@yield('page_title')</h1>
