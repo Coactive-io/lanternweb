@@ -54,9 +54,11 @@ class UserController extends Controller
             $user = new User;
             $user->phone = $cleanPhone;
             $user->save();
-            $user->send("welcome");
+            $user->send("confirmToStart");
+            return redirect('phone');
         } else {
             $existing->send("existing");
+            return redirect('phone');
         }
 
 
