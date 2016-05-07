@@ -35,19 +35,21 @@
 				@endif
 				<div class="main-text">
 					<img src="img/lantern-logo.svg">
-					<h1>Go out. Discover your city.</h1>
+					<h1>@yield('page_title')</h1>
 					<hr>
-				</div>
-
-				<div class="content col-md-offset-2 col-md-8">
-					<p>Introducing a new way to enjoy your city's nightlife.<br />Get in line to gain access to exlcusive deals.</p>
 				</div>
 			</div>
 		</div>
 @yield('content')
 <!-- footer -->
+		<!-- social networks -->
+		<div class="social-wrapper col-md-12">
+			<ul class="social">
+				<li><a href="#" class="twitter">Twitter</a></li><li><a href="#" class="facebook">Facebook</a></li><li><a href="#" class="instagram">Instagram</a></li>
+			</ul>
+		</div>
 <div class="footer col-md-12">
-    <p>&copy; 2016 Lantern, llc. All rights reserved.</p>
+    <p>&copy; 2016 Lantern, LLC. All rights reserved.</p>
 </div>
 <!-- end footer -->
 </div>

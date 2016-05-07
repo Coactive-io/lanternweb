@@ -2,8 +2,15 @@
 @section('title')
 	Lantern &dash; Go out. Discover your city.
 @stop
+@section('page_title')
+	<h1>Go out. Discover your city.</h1>
+@endsection
 @section('content')
-		<!-- footer -->
+		<div class="row">
+			<div class="content col-md-offset-2 col-md-8">
+				<p>Introducing a new way to enjoy your city's nightlife.<br />Get in line to gain access to exlcusive deals.</p>
+			</div>
+		</div>
 		<div class="row">
 
 			<!-- mobile number -->
@@ -42,13 +49,6 @@
 						<p class="small">Coming Soon</p>
 					</div>
 				</div>
-			</div>
-
-			<!-- social networks -->
-			<div class="social-wrapper col-md-12">
-				<ul class="social">
-					<li><a href="https://twitter.com/getlanternapp" class="twitter">Twitter</a></li><li><a href="#" class="facebook">Facebook</a></li><li><a href="https://www.instagram.com/getlanternapp" class="instagram">Instagram</a>
-				</ul>
 			</div>
 		</div>
 @stop
