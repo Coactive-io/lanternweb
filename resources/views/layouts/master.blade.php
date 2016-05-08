@@ -45,7 +45,7 @@
 		<!-- social networks -->
 		<div class="social-wrapper col-md-12">
 			<ul class="social">
-				<li><a href="#" class="twitter">Twitter</a></li><li><a href="#" class="facebook">Facebook</a></li><li><a href="#" class="instagram">Instagram</a></li>
+				<li><a href="https://www.twitter.com/getlanternapp" target="_blank" class="twitter">Twitter</a></li><li><a href="https://www.facebook.com/getlanternapp" target="_blank" class="facebook">Facebook</a></li><li><a href="https://www.instagram.com/getlanternapp" target="_blank" class="instagram">Instagram</a></li>
 			</ul>
 		</div>
 <div class="footer col-md-12">
