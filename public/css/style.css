@@ -348,3 +348,22 @@ input {
 input:last-child {
 	margin: 0;
 }
+
+
+
+
+
+
+.help-block {
+	color: #fff;
+	font-size: 18px;
+}
+
+
+
+
+
+.sms {
+	color: #fff;
+	text-align: center;
+}
