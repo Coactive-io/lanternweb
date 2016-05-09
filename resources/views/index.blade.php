@@ -1,10 +1,12 @@
 @extends('layouts.master')
 @section('title')
 	Lantern &dash; Go out. Discover your city.
-@stop
+@endsection
+
 @section('page_title')
 	<h1>Go out. Discover your city.</h1>
 @endsection
+
 @section('content')
 		<div class="row">
 			<div class="content col-md-offset-2 col-md-8">
@@ -35,9 +37,7 @@
 					</div>
 					<div class="active col-md-6">
 						<p class="small">30% Spots Left</p>
-						<div class="progress-bar">
-							<div class="progress">
-							</div>
+						<div id="progress-bar-container-78205" class="progress-bar">
 						</div>
 					</div>
 				</div>
@@ -47,8 +47,32 @@
 					</div>
 					<div class="active col-md-6">
 						<p class="small">Coming Soon</p>
+						<div id="progress-bar-container-78701"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-@stop
+@endsection
+
+@section('scripts')
+	<script src="/js/nanobar.min.js"></script>
+	<script>
+		var options = {
+		  	id: 'progress-bar-78205',
+		  	classname: '',
+		  	target: document.getElementById('progress-bar-container-78205')
+		};
+
+		var nanobar = new Nanobar( options );
+
+		// move bar
+		setTimeout(function() {
+			nanobar.go( 30 ); // size bar 30%
+		}, 1000);
+		
+		// nanobar.go( 76 ); // size bar 76%
+
+		// size bar 100% and and finish
+		// nanobar.go(90);
+	</script>
+@endsection
