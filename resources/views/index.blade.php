@@ -8,7 +8,7 @@
 @section('content')
 		<div class="row">
 			<div class="content col-md-offset-2 col-md-8">
-				<p>Introducing a new way to enjoy your city's nightlife.<br />Get in line to gain access to exlcusive deals.</p>
+				<p>Introducing a new way to enjoy your city's nightlife.<br />Get in line to gain access to exclusive deals.</p>
 			</div>
 		</div>
 		<div class="row">
@@ -19,7 +19,7 @@
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 				<div class="mobile-number col-md-8 col-md-offset-2">
 					<div class="input-group">
-						<input type="tel" name="phone" class="form-control" placeholder="Mobile Number" style="font-size: 18px; font-weight: 500;">
+						<input type="tel" name="phone" class="form-control" placeholder="Mobile Number" maxlength="15" style="font-size: 18px; font-weight: 500;">
 						<span class="input-group-btn">
 							<button class="btn btn-default" type="submit" style="font-size: 18px; font-weight: 500;">Get Invited</button>
 						</span>
