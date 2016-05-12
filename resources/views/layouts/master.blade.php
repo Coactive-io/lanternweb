@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title')</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/js/jquery-1.11.min.js"></script>
     <script src="https://use.typekit.net/pam1tgt.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
@@ -18,11 +20,14 @@
 				<div class="right-nav col-md-6">
 					<a href="/">Lantern</a>
 				</div>
+                @if($_SERVER['REQUEST_URI'] != '/business')
 				<div class="left-nav col-md-6">
 					<a class="nav-button" href="/business">Got a Business?</a>
 				</div>
+                @endif
 			</div>
 		</div>
+        <!-- end nav -->
 
 	 	<!-- heading -->
 		<div class="row">
@@ -39,17 +44,24 @@
 				</div>
 			</div>
 		</div>
-@yield('content')
-<!-- footer -->
-		<!-- social networks -->
-		<div class="social-wrapper col-md-12">
-			<ul class="social">
-				<li><a href="#" class="twitter">Twitter</a></li><li><a href="#" class="facebook">Facebook</a></li><li><a href="#" class="instagram">Instagram</a></li>
-			</ul>
-		</div>
-<div class="footer col-md-12">
-    <p>&copy; 2016 Lantern, LLC. All rights reserved.</p>
-</div>
-<!-- end footer -->
-</div>
+        <!-- end heading -->
+
+        @yield('content')
+
+        <!-- footer -->
+        		<!-- social networks -->
+        		<div class="social-wrapper col-md-12">
+        			<ul class="social">
+        				<li><a href="https://www.twitter.com/getlanternapp" target="_blank" class="twitter">Twitter</a></li><li><a href="https://www.facebook.com/getlanternapp" target="_blank" class="facebook">Facebook</a></li><li><a href="https://www.instagram.com/getlanternapp" target="_blank" class="instagram">Instagram</a></li>
+        			</ul>
+        		</div>
+        <div class="footer col-md-12">
+            <p>&copy; 2016 Lantern, LLC. All rights reserved. Made with <span style="color:#3ca69f;">&#9825;</span> in SATX.</p>
+        </div>
+        <!-- end footer -->
+
+    </div>
+    <!-- end container -->
+
+    @yield('scripts')
 </body>

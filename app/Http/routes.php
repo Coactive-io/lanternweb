@@ -19,7 +19,6 @@ Route::get('login', function () {
 });
 Route::post('sms', array('uses' => 'InboundSmsController@handle'));
 Route::get('phone',function(){
-
     return view('phone');
 });
 

@@ -60,13 +60,17 @@ p.small {
 		overflow: auto;
 		display: block;
 	}
-	.progress {
-		background-color: #FF9F3C;
-		border-radius: 12px;
-		height: 6px;
-		width: 50%;
-		overflow: auto;
-		display: block;
+
+	.nanobar {
+  		width: 100%;
+  		height: 100%;
+	}
+
+	.bar {
+	  	width: 0;
+	  	height: 100%;
+	  	transition: height .3s;
+	  	background:#FF9F3C;
 	}
 /* End Progress Bar */
 
@@ -347,4 +351,23 @@ input {
 }
 input:last-child {
 	margin: 0;
+}
+
+
+
+
+
+
+.help-block {
+	color: #fff;
+	font-size: 18px;
+}
+
+
+
+
+
+.sms {
+	color: #fff;
+	text-align: center;
 }

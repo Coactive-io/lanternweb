@@ -35,7 +35,7 @@
     <br/>
 
     <div class="footer col-md-12">
-        <p>&copy; 2016 Lantern, llc. All rights reserved.</p>
+        <p>&copy; 2016 Lantern, LLC. All rights reserved. Made with <span style="color:#3ca69f;">&#9825;</span> in SATX.</p>
     </div>
     <!-- end footer -->
 </div>

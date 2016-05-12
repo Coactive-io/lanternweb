@@ -11,7 +11,7 @@
     @endif
     {{Form::open(array('url'=>'/message/'.$m->id, 'method'=>'patch'))}}
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-12 message">
             <div class="form-group">
                 {{Form::text('name', $m->name, array('class'=>'form-control', 'placeholder'=>'Name'))}}
                 <p class="help-block">A reader friendly name to help us identify what this message is.</p>
