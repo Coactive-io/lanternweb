@@ -19,7 +19,7 @@ class InboundSmsController extends Controller
             //If there is a message (that's also specified as a response) than we'll send it.
             return $this->smsResponse($message->content);
         } else {
-            //If there's not, we'll check to see if there's some log that applies to the situation before sending back an error.
+            //If there's not, we'll check to see if there's some log that applies to the situation before sending back an error.    
 
 
             return $this->smsResponse('Sorry, we didn’t get that. Text HELP for a complete list of options.');
