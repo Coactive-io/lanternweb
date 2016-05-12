@@ -44,4 +44,15 @@ class User extends Authenticatable
         }
     }
 
+    public static function spotsAvailable()
+    {
+        $capacity = 500;
+        $beta_limit = 50;
+        // TODO: update count to only count confirmed users
+        // $count = self::whereConfirmed('1')->count();
+        $count = self::count();
+
+       return 0;
+    }
+
 }

@@ -9,9 +9,36 @@
     <script src="/js/jquery-1.11.min.js"></script>
     <script src="https://use.typekit.net/pam1tgt.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+	<!--FACEBOOK META TAGS-->
+	<meta property="og:url"           content="https://getlanternapp.co" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="Lantern:  Go out.  Discover your city." />
+	<meta property="og:description"   content="Introducing a new way to enjoy your city's nightlife.
+Get in line to gain access to exclusive deals." />
+	<meta property="og:image"         content="https://getlanternapp.co/cat.jpg" />
+	<!--END FACEBOOK META TAGS-->
+
 </head>
 <body>
-	<!-- container -->
+<div id="fb-root"></div>
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '1613588092293585',
+			xfbml      : true,
+			version    : 'v2.6'
+		});
+	};
+
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
 	<div class="container">
 
 		<!-- nav -->
