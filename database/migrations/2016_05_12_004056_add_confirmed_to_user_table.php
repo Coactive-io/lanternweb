@@ -14,7 +14,6 @@ class AddConfirmedToUserTable extends Migration
     {
         Schema::table('users', function($table)
         {
-            $table->dateTime('confirmed_at')->nullable();
             $table->dateTime('deleted_at')->nullable();
 
         });
