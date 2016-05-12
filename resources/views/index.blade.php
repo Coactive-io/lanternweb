@@ -1,4 +1,7 @@
-<?php $capacity = App\User::capacity(); ?>
+<?php 
+	$percent_left = App\User::spotsAvailable(); 
+	$bar_percentage = 100 - $percent_left;
+?>
 
 @extends('layouts.master')
 @section('title')
@@ -13,7 +16,6 @@
 		<div class="row">
 			<div class="content col-md-offset-2 col-md-8">
 				<p>Introducing a new way to enjoy your city's nightlife.<br />Get in line to gain access to exclusive deals.</p>
-				<p>{{ $capacity }}</p>
 			</div>
 		</div>
 		<div class="row">
@@ -39,7 +41,7 @@
 						<p>San Antonio, TX</p>
 					</div>
 					<div class="active col-md-6">
-						<p class="small">30% Spots Left</p>
+						<p class="small">{{ $percent_left }}% of Spots Left</p>
 						<div id="progress-bar-container-78205" class="progress-bar">
 						</div>
 					</div>
@@ -70,12 +72,8 @@
 
 		// move bar
 		setTimeout(function() {
-			nanobar.go( 30 ); // size bar 30%
+			nanobar.go( <?= $bar_percentage ?> ); // size bar
 		}, 1000);
 		
-		// nanobar.go( 76 ); // size bar 76%
-
-		// size bar 100% and and finish
-		// nanobar.go(90);
 	</script>
 @endsection

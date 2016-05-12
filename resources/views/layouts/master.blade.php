@@ -56,7 +56,7 @@
         			</ul>
         		</div>
         <div class="footer col-md-12">
-            <p>&copy; 2016 Lantern, LLC. All rights reserved. Made with <span style="color:#3ca69f;">&#9825;</span> in SATX.</p>
+            <p>&copy; <?= date('Y'); ?> Lantern, LLC. All rights reserved. Made with <span style="color:#3ca69f;">&#9825;</span> in SATX.</p>
         </div>
         <!-- end footer -->
 
