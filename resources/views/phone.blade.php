@@ -20,7 +20,7 @@
 			<!-- social buttons -->
 			<div class="share-buttons">
 				<div class="twitter">
-					<a href="#" class="share-btn-facebook">Share on Facebook</a>
+					<a href="#" class="fb-share-button share-btn-facebook" data-href="https://developers.facebook.com/docs/plugins/" data-layout="link">Share on Facebook</a>
 				</div>
 
 				<div class="facebook">
