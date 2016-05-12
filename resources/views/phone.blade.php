@@ -20,11 +20,11 @@
 			<!-- social buttons -->
 			<div class="share-buttons">
 				<div class="facebook">
-					<a href="#" class="share-btn-facebook" data-message="yo">Share on Facebook</a>
+					<a href="#" class="share-btn-facebook" data-message="I’m waiting in line to use Lantern in my city, save your spot today.">Share on Facebook</a>
 				</div>
 
 				<div class="twitter">
-					<a href="#" class="share-btn-twitter">Share on Twitter</a>
+					<a href="https://twitter.com/share" class="share-btn-twitter" data-url="https://getlaltern.co" data-url="https://www.getlantern.co" data-message="I’m waiting in line to use Lantern in San Antonio, save your spot today. #lanternsatx" data-hashtags="lantern">Tweet</a>
 				</div>
 			</div>
 			<!-- end social buttons -->
