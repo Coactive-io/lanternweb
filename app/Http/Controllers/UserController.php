@@ -44,18 +44,27 @@ class UserController extends Controller
     {
 
         $this->validate($request, [
-            'phone' => 'required|max:20|phone'
+            'phone' => 'required|max:15|phone'
         ]);
 
         $cleanPhone = Helper::PhoneValidator($request->input('phone'));
         $existing = User::where('phone','=',$cleanPhone)->first();
         if(empty($existing)){
             //A new moth
-            $user = new User;
-            $user->phone = $cleanPhone;
-            $user->save();
-            $user->send("confirmToStart");
-            return redirect('phone');
+            if(User::spotsAvailable()!=0){
+                $user = new User;
+                $user->phone = $cleanPhone;
+                $user->save();
+                $user->send("confirmToStart");
+                return redirect('phone');
+            } else {
+                $user = new User;
+                $user->phone = $cleanPhone;
+                $user->save();
+                $user->send("waitingList");
+                return redirect('hold-tight');
+            }
+
         } else {
             $existing->send("existing");
             return redirect('phone');

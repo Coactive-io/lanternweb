@@ -1,4 +1,3 @@
-<?php $capacity = App\User::capacity(); ?>
 
 @extends('layouts.master')
 @section('title')
@@ -13,7 +12,7 @@
 		<div class="row">
 			<div class="content col-md-offset-2 col-md-8">
 				<p>Introducing a new way to enjoy your city's nightlife.<br />Get in line to gain access to exclusive deals.</p>
-				<p>{{ $capacity }}</p>
+
 			</div>
 		</div>
 		<div class="row">

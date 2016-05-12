@@ -21,6 +21,9 @@ Route::post('sms', array('uses' => 'InboundSmsController@handle'));
 Route::get('phone',function(){
     return view('phone');
 });
+Route::get('hold-tight',function(){
+    return view('waiting');
+});
 
 Route::get('auth/github', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/github/callback', 'Auth\AuthController@handleProviderCallback');
