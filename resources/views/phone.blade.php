@@ -19,11 +19,11 @@
 
 			<!-- social buttons -->
 			<div class="share-buttons">
-				<div class="twitter">
-					<a href="#" class="fb-share-button share-btn-facebook" data-href="https://developers.facebook.com/docs/plugins/" data-layout="link">Share on Facebook</a>
+				<div class="facebook">
+					<a href="#" class="share-btn-facebook" data-message="yo">Share on Facebook</a>
 				</div>
 
-				<div class="facebook">
+				<div class="twitter">
 					<a href="#" class="share-btn-twitter">Share on Twitter</a>
 				</div>
 			</div>
@@ -33,3 +33,6 @@
 
 @stop
 
+@section('scripts')
+	<script src="/js/social.js"></script>
+@endsection
