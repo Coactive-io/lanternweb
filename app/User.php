@@ -44,4 +44,19 @@ class User extends Authenticatable
         }
     }
 
+    public static function capacity()
+    {
+        $capacity = 500;
+        $beta_limit = 50;
+        // TODO: update count to only count confirmed users
+        // $count = self::whereConfirmed('1')->count();
+        $count = self::count();
+
+        if($count == $beta_limit){
+            return 100;
+        }
+
+        return round(($capacity - $beta_limit - $count) / $capacity * 100);
+    }
+
 }
