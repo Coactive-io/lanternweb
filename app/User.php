@@ -44,6 +44,10 @@ class User extends Authenticatable
         }
     }
 
+    public static function isFull() {
+        return true;
+    }
+
 
 
 }
