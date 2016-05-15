@@ -1,8 +1,7 @@
 <?php
-	$percent_left = App\User::spotsAvailable(); 
-	$bar_percentage = 100 - $percent_left;
-?>
+	$capacity = App\User::capacity();
 
+?>
 @extends('layouts.master')
 @section('title')
 	Lantern &dash; Go out. Discover your city.
@@ -46,7 +45,7 @@
 						<p>San Antonio, TX</p>
 					</div>
 					<div class="active col-md-6">
-						<p class="small">{{ $percent_left }}% of Spots Left</p>
+						<p class="small">{{ $capacity }}% of Spots Left</p>
 						<div id="progress-bar-container-78205" class="progress-bar">
 						</div>
 					</div>
@@ -77,7 +76,7 @@
 
 		// move bar
 		setTimeout(function() {
-			nanobar.go( <?= $bar_percentage ?> ); // size bar
+			nanobar.go( <?= $capacity ?> ); // size bar
 		}, 1000);
 
 	</script>
