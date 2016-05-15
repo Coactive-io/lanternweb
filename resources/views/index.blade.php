@@ -31,6 +31,11 @@
 							<button class="btn btn-default" type="submit" style="font-size: 18px; font-weight: 500;">Get Invited</button>
 						</span>
 					</div>
+					@if (count($errors) > 0)
+	                    <div class="alert alert-danger" role="alert" style="margin-top:10px;">
+	                        Please enter a valid phone number
+	                    </div>
+	                @endif
 				</div>
 			</form>
 
