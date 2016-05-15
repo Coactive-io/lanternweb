@@ -15,6 +15,8 @@ class InboundSmsController extends Controller
         $from  =$request->input('From');
 
         //First we'll check to see if there's already a message for this command.
+
+
         $message = Message::where('command','=', $command)->where('response','=','1')->first();
         if(!empty($message)){
             //If there is a message (that's also specified as a response) than we'll send it.
