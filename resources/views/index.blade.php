@@ -1,3 +1,7 @@
+<?php
+	$percent_left = App\User::spotsAvailable();
+	$bar_percentage = 100 - $percent_left;
+?>
 
 @extends('layouts.master')
 @section('title')
@@ -12,7 +16,6 @@
 		<div class="row">
 			<div class="content col-md-offset-2 col-md-8">
 				<p>Introducing a new way to enjoy your city's nightlife.<br />Get in line to gain access to exclusive deals.</p>
-
 			</div>
 		</div>
 		<div class="row">
@@ -28,6 +31,11 @@
 							<button class="btn btn-default" type="submit" style="font-size: 18px; font-weight: 500;">Get Invited</button>
 						</span>
 					</div>
+					@if (count($errors) > 0)
+	                    <div class="alert alert-danger" role="alert" style="margin-top:10px;">
+	                        Please enter a valid phone number
+	                    </div>
+	                @endif
 				</div>
 			</form>
 
@@ -38,7 +46,7 @@
 						<p>San Antonio, TX</p>
 					</div>
 					<div class="active col-md-6">
-						<p class="small">30% Spots Left</p>
+						<p class="small">{{ $percent_left }}% of Spots Left</p>
 						<div id="progress-bar-container-78205" class="progress-bar">
 						</div>
 					</div>
@@ -69,12 +77,8 @@
 
 		// move bar
 		setTimeout(function() {
-			nanobar.go( 30 ); // size bar 30%
+			nanobar.go( <?= $bar_percentage ?> ); // size bar
 		}, 1000);
-		
-		// nanobar.go( 76 ); // size bar 76%
 
-		// size bar 100% and and finish
-		// nanobar.go(90);
 	</script>
 @endsection
