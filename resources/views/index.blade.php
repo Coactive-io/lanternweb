@@ -1,5 +1,5 @@
 <?php
-	$percent_left = App\User::spotsAvailable();
+	$percent_left = App\User::spotsAvailable(); 
 	$bar_percentage = 100 - $percent_left;
 ?>
 
