@@ -4,7 +4,7 @@
 @stop
 
 @section('page_title')
-	<h1>Well aren't we popular?<br />  Lantern San Antonio is full</h1>
+	<h1>Well aren't we popular?<br />Lantern San Antonio is full</h1>
 @stop
 
 @section('content')
@@ -13,7 +13,7 @@
 		<div class="content col-md-offset-2 col-md-8">
 			<!-- main text -->
 			<div class="main-text">
-				<p><br>Hold tight;  we're saving your place in line.  Don't worry, you'll hear from us soon.</p>
+				<p><br>Hold tight! We're saving your place in line.<br>Don't worry, you'll hear from us soon.</p>
 			</div>
 			<!-- end main text -->
 
