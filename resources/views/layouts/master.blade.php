@@ -16,7 +16,7 @@
 	<meta property="og:type"          content="website" />
 	<meta property="og:title"         content="Lantern:  Go out.  Discover your city." />
 	<meta property="og:description"   content="Introducing a new way to enjoy your city's nightlife.
-Get in line to gain access to exclusive deals." />
+Get in line to gain access to exclusive events." />
 	<meta property="og:image"         content="https://getlanternapp.co/cat.jpg" />
 	<!--END FACEBOOK META TAGS-->
 
@@ -66,7 +66,7 @@ Get in line to gain access to exclusive deals." />
 					</div>
 				@endif
 				<div class="main-text">
-					<img src="img/lantern-logo.svg">
+					<img src="img/lantern-logo-v2.svg">
 					<h1>@yield('page_title')</h1>
 					<hr>
 				</div>

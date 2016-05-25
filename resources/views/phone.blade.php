@@ -4,7 +4,8 @@
 @stop
 
 @section('page_title')
-	<h1>Well that's the cat's meow.<br />  You're in.</h1>
+	<h1>Well that's the cat's meow.<br />  You're in!</h1>
+	<h3>We'll let you know when we officially launch the service.</h3>
 @stop
 
 @section('content')
