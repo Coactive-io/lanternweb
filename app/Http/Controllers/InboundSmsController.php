@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Http\Requests;
 use App\Message;
+use App\User;
+use App\Services\Helper;
 
 
 class InboundSmsController extends Controller
@@ -15,9 +17,15 @@ class InboundSmsController extends Controller
         $from  =$request->input('From');
         if($command=='start'){
             $user = User::where('phone','=', $from)->first();
-            $user->confirmed_at = date('YYYY-MM-DD');
+            if(empty($user)){
+                $cleanPhone = Helper::PhoneValidator($from);
+                $user = new User;
+                $user->phone = $cleanPhone;
+            }
+            $user->confirmed_at = date("Y-m-d H:i:s");
             $user->save();
             $user->send('start');
+            return null;
         }
 
         //First we'll check to see if there's already a message for this command.
