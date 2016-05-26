@@ -9,7 +9,6 @@ use App\Http\Requests;
 use App\Message;
 use App\User;
 use App\Services\Helper;
-use App\History;
 
 
 class InboundSmsController extends Controller
@@ -18,7 +17,7 @@ class InboundSmsController extends Controller
         $command = $request->input('Body');
         $from  =$request->input('From');
         $user = User::where('phone','=', $from)->first();
-        $history = new History();
+        $history = new History;
         if($command=='start'){
             $user = User::where('phone','=', $from)->first();
             if(empty($user)){
@@ -29,6 +28,7 @@ class InboundSmsController extends Controller
             $user->confirmed_at = date("Y-m-d H:i:s");
             $user->save();
             $user->send('start');
+            $history->message_id = 1;
             $history->user_input = $command;
             $history->user_id = $user->id;
             $history->save();
@@ -36,8 +36,13 @@ class InboundSmsController extends Controller
         }
 
         $history->user_input = $command;
+        $history->message_id = 0;
+
         if(!empty($user)){
             $history->user_id = $user->id;
+        } else{
+            $history->user_id = 0;
+
         }
         $history->save();
 
