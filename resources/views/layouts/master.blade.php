@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="https://cdn.optimizely.com/js/1002326942.js"></script>
     <meta charset="UTF-8">
     <title>@yield('title')</title>
     <link rel="icon" href="/favicon.ico"/>
@@ -12,12 +13,12 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 	<!--FACEBOOK META TAGS-->
-	<meta property="og:url"           content="https://getlanternapp.co" />
+	<meta property="og:url"           content="https://getlantern.co" />
 	<meta property="og:type"          content="website" />
 	<meta property="og:title"         content="Lantern:  Go out.  Discover your city." />
 	<meta property="og:description"   content="Introducing a new way to enjoy your city's nightlife.
 Get in line to gain access to exclusive events." />
-	<meta property="og:image"         content="https://getlanternapp.co/cat.jpg" />
+	<meta property="og:image"         content="https://getlantern.co/img/logo.gif" />
 	<!--END FACEBOOK META TAGS-->
 
 </head>

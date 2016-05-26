@@ -19,17 +19,20 @@
 
 			<!-- social buttons -->
 			<div class="share-buttons">
-				<div class="twitter">
-					<a href="#" class="share-btn-facebook">Share on Facebook</a>
+				<div class="facebook">
+					<a href="#" class="share-btn-facebook" data-message="I just got in line to join Lantern for exclusive San Antonio events and bonuses.  Save your spot too.">Share on Facebook</a>
 				</div>
 
-				<div class="facebook">
-					<a href="#" class="share-btn-twitter">Share on Twitter</a>
+				<div class="twitter">
+					<a href="https://twitter.com/share" class="share-btn-twitter" data-url="https://getlantern.co"  data-message="I just got in line to join @getlanternapp for exclusive San Antonio events.  Save your spot too. #lanternsatx" data-hashtags="lantern">Tweet</a>
 				</div>
 			</div>
 			<!-- end social buttons -->
 		</div>
 	</div>
 
-@stop
+@endsection
 
+@section('scripts')
+	<script src="/js/social.js"></script>
+@endsection

@@ -21,11 +21,11 @@
 			<!-- social buttons -->
 			<div class="share-buttons">
 				<div class="facebook">
-					<a href="#" class="share-btn-facebook" data-message="I’m waiting in line to use Lantern in my city, save your spot today.">Share on Facebook</a>
+					<a href="#" class="share-btn-facebook" data-message="I just joined Lantern for exclusive San Antonio events and bonuses.  Save your spot too.">Share on Facebook</a>
 				</div>
 
 				<div class="twitter">
-					<a href="https://twitter.com/share" class="share-btn-twitter" data-url="https://getlaltern.co" data-url="https://www.getlantern.co" data-message="I’m waiting in line to use Lantern in San Antonio, save your spot today. #lanternsatx" data-hashtags="lantern">Tweet</a>
+					<a href="https://twitter.com/share" class="share-btn-twitter" data-url="https://getlantern.co"  data-message="I just joined Lantern for exclusive San Antonio events and bonuses.  Save your spot too." data-hashtags="lantern">Tweet</a>
 				</div>
 			</div>
 			<!-- end social buttons -->
