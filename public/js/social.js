@@ -6,14 +6,19 @@ $(".share-btn-facebook").on('click', function(){
     var message = $(this).data('message');
     FB.ui({
         method: 'share',
-        href: 'https://getlanternapp.co',
+        href: 'https://getlantern.co',
         quote: message
     }, function(response){});
 });
 
-
+var message;
 $('.share-btn-twitter').click(function(event) {
-        var message = $(this).data('message');
+
+        message = $(this).data('message');
+        var shareUrl = $(this).data('url');
+        if(!shareUrl.length>0){
+            shareUrl = "https://getlantern.co"
+        }
         var width  = 575,
             height = 400,
             left   = ($(window).width()  - width)  / 2,
@@ -25,6 +30,6 @@ $('.share-btn-twitter').click(function(event) {
                 ',top='    + top    +
                 ',left='   + left;
 
-        window.open(url+'?text='+message, 'twitter', opts);
+        window.open(url+'?url='+shareUrl+'&text='+message, 'twitter', opts);
         return false;
     });

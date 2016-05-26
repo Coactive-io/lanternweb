@@ -50,8 +50,8 @@ class User extends Authenticatable
         // TODO: update count to only count confirmed users
         // $count = self::whereConfirmed('1')->count();
         $count = self::count();
-        $percent_left = round(($capacity - $count) / $capacity * 100);
 
+        $percent_left = round(($capacity - $count) / $capacity * 100);
         if($percent_left > 30){
             return 30;
         }
