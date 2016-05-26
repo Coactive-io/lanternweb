@@ -12,6 +12,11 @@ Use App\User;
 */
 
 Route::get('/', function () {
+
+
+
+
+
     return view('index');
 });
 Route::get('login', function () {
