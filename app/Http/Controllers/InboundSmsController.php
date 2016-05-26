@@ -13,9 +13,14 @@ class InboundSmsController extends Controller
     public function handle(Request $request){
         $command = $request->input('Body');
         $from  =$request->input('From');
+        if($command=='start'){
+            $user = User::where('phone','=', $from)->first();
+            $user->confirmed_at = date('YYYY-MM-DD');
+            $user->save();
+            $user->send('start');
+        }
 
         //First we'll check to see if there's already a message for this command.
-
 
         $message = Message::where('command','=', $command)->where('response','=','1')->first();
         if(!empty($message)){
