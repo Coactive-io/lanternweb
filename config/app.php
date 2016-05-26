@@ -161,6 +161,8 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Jenssegers\Rollbar\RollbarServiceProvider::class,
+
 
 
     ],
