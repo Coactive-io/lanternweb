@@ -4,7 +4,8 @@
 @stop
 
 @section('page_title')
-	<h1>Well that's the cat's meow.<br />  You're in.</h1>
+	<h1>Well that's the cat's meow.<br />  You're in!</h1>
+	<h3>We'll let you know when we officially launch the service.</h3>
 @stop
 
 @section('content')
@@ -19,12 +20,12 @@
 
 			<!-- social buttons -->
 			<div class="share-buttons">
-				<div class="twitter">
-					<a href="#" class="fb-share-button share-btn-facebook" data-href="https://getlantern.co" data-layout="link">Share on Facebook</a>
+				<div class="facebook">
+					<a href="#" class="share-btn-facebook" data-message="I’m waiting in line to use Lantern in my city, save your spot today.">Share on Facebook</a>
 				</div>
 
-				<div class="facebook">
-					<a href="#" class="share-btn-twitter">Share on Twitter</a>
+				<div class="twitter">
+					<a href="https://twitter.com/share" class="share-btn-twitter" data-url="https://getlaltern.co" data-url="https://www.getlantern.co" data-message="I’m waiting in line to use Lantern in San Antonio, save your spot today. #lanternsatx" data-hashtags="lantern">Tweet</a>
 				</div>
 			</div>
 			<!-- end social buttons -->
@@ -33,3 +34,6 @@
 
 @stop
 
+@section('scripts')
+	<script src="/js/social.js"></script>
+@endsection

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title')</title>
+    <link rel="icon" href="/favicon.ico"/>
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -15,7 +16,7 @@
 	<meta property="og:type"          content="website" />
 	<meta property="og:title"         content="Lantern:  Go out.  Discover your city." />
 	<meta property="og:description"   content="Introducing a new way to enjoy your city's nightlife.
-Get in line to gain access to exclusive deals." />
+Get in line to gain access to exclusive events." />
 	<meta property="og:image"         content="https://getlanternapp.co/cat.jpg" />
 	<!--END FACEBOOK META TAGS-->
 
@@ -65,7 +66,7 @@ Get in line to gain access to exclusive deals." />
 					</div>
 				@endif
 				<div class="main-text">
-					<img src="img/lantern-logo.svg">
+					<img src="img/lantern-logo-v2.svg">
 					<h1>@yield('page_title')</h1>
 					<hr>
 				</div>
@@ -83,7 +84,7 @@ Get in line to gain access to exclusive deals." />
         			</ul>
         		</div>
         <div class="footer col-md-12">
-            <p>&copy; 2016 Lantern, LLC. All rights reserved. Made with <span style="color:#3ca69f;">&#9825;</span> in SATX.</p>
+            <p>&copy; <?= date('Y'); ?> Lantern, LLC. All rights reserved. Made with <span style="color:#3ca69f;">&#9825;</span> in SATX.</p>
         </div>
         <!-- end footer -->
 
@@ -91,4 +92,14 @@ Get in line to gain access to exclusive deals." />
     <!-- end container -->
 
     @yield('scripts')
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-78281738-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
 </body>
