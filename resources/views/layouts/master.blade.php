@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script src="https://cdn.optimizely.com/js/1002326942.js"></script>
+	<script src="https://cdn.optimizely.com/js/6032242731.js"></script>
     <meta charset="UTF-8">
     <title>@yield('title')</title>
     <link rel="icon" href="/favicon.ico"/>
