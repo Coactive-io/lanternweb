@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\History;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Http\Requests;
 use App\Message;
 use App\User;
 use App\Services\Helper;
+use App\History;
 
 
 class InboundSmsController extends Controller
@@ -15,6 +17,8 @@ class InboundSmsController extends Controller
     public function handle(Request $request){
         $command = $request->input('Body');
         $from  =$request->input('From');
+        $user = User::where('phone','=', $from)->first();
+        $history = new History();
         if($command=='start'){
             $user = User::where('phone','=', $from)->first();
             if(empty($user)){
@@ -25,8 +29,18 @@ class InboundSmsController extends Controller
             $user->confirmed_at = date("Y-m-d H:i:s");
             $user->save();
             $user->send('start');
+            $history->user_input = $command;
+            $history->user_id = $user->id;
+            $history->save();
             return null;
         }
+
+        $history->user_input = $command;
+        if(!empty($user)){
+            $history->user_id = $user->id;
+        }
+        $history->save();
+
 
         //First we'll check to see if there's already a message for this command.
 
