@@ -62,7 +62,6 @@ class UserController extends Controller
                 $user->send("waitingList");
                 return redirect('hold-tight');
             }
-
         } else {
             $existing->send("existing");
             return redirect('phone');
