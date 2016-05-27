@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "be817c2ee6fa8da22cb3fdde915b2daa",
+    "hash": "642b284f2412fb01f1167260d3459068",
     "content-hash": "8639c110f684880a3f6ea8dc28e0dc41",
     "packages": [
         {
@@ -1253,16 +1253,16 @@
         },
         {
             "name": "laravel/socialite",
-            "version": "v2.0.16",
+            "version": "v2.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/socialite.git",
-                "reference": "f3e3bdf9368b96b82635cb88ab02944b7d036669"
+                "reference": "81d39cde2226f7548d8d1aa99405278c87e50737"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/socialite/zipball/f3e3bdf9368b96b82635cb88ab02944b7d036669",
-                "reference": "f3e3bdf9368b96b82635cb88ab02944b7d036669",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/81d39cde2226f7548d8d1aa99405278c87e50737",
+                "reference": "81d39cde2226f7548d8d1aa99405278c87e50737",
                 "shasum": ""
             },
             "require": {
@@ -1303,7 +1303,7 @@
                 "laravel",
                 "oauth"
             ],
-            "time": "2016-05-25 12:58:08"
+            "time": "2016-05-27 12:42:05"
         },
         {
             "name": "laravelcollective/html",

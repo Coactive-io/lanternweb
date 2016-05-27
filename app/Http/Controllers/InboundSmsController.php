@@ -14,7 +14,7 @@ use App\Services\Helper;
 class InboundSmsController extends Controller
 {
     public function handle(Request $request){
-        $command = $request->input('Body');
+        $command = strtolower($request->input('Body'));
         $from  =$request->input('From');
         $user = User::where('phone','=', $from)->first();
         $history = new History();
