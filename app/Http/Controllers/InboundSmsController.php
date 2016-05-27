@@ -55,7 +55,7 @@ class InboundSmsController extends Controller
             return $this->smsResponse($message->content);
         } else {
             //If there's not, we'll check to see if there's some log that applies to the situation before sending back an error.
-            return $this->smsResponse('Sorry, we didn’t get that. Text HELP for a complete list of options.');
+            return $this->smsResponse("Sorry, we didn’t get that.  Lantern hasn't launched yet but we'll be in touch soon.");
         }
     }
 
