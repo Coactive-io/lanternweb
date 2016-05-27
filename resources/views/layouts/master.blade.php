@@ -103,4 +103,6 @@ Get in line to gain access to exclusive events." />
 		ga('send', 'pageview');
 
 	</script>
+	<script src="/js/social.js"></script>
+
 </body>
