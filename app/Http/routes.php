@@ -23,6 +23,11 @@ Route::get('contact', function () {
     return view('contact');
 });
 
+Route::get('press', function () {
+    return view('press');
+});
+
+
 Route::post('sms', array('uses' => 'InboundSmsController@handle'));
 Route::get('phone',function(){
     return view('phone');
