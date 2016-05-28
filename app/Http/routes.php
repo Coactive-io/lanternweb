@@ -18,6 +18,11 @@ Route::get('/', function () {
 Route::get('login', function () {
     return view('login');
 });
+
+Route::get('contact', function () {
+    return view('contact');
+});
+
 Route::post('sms', array('uses' => 'InboundSmsController@handle'));
 Route::get('phone',function(){
     return view('phone');
