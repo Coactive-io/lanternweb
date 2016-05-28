@@ -14,15 +14,15 @@ use App\Services\Helper;
 class InboundSmsController extends Controller
 {
     public function handle(Request $request){
-        $command = $request->input('Body');
+        $command = strtolower($request->input('Body'));
         $from  =$request->input('From');
         $user = User::where('phone','=', $from)->first();
-        $history = new History;
+        $history = new History();
         if($command=='start'){
             $user = User::where('phone','=', $from)->first();
             if(empty($user)){
                 $cleanPhone = Helper::PhoneValidator($from);
-                $user = new User;
+                $user = new User();
                 $user->phone = $cleanPhone;
             }
             $user->confirmed_at = date("Y-m-d H:i:s");
