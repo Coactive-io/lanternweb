@@ -39,9 +39,25 @@ class User extends Authenticatable
             $log->message_id = $message->id;
             $log->user_input = $userInput;
             $log->save();
+            return true;
         }else{
             return false;
         }
     }
+    public static function spotsAvailable()
+    {
+        $capacity = env('CAPACITY_LIMIT');
+        // TODO: update count to only count confirmed users
+        // $count = self::whereConfirmed('1')->count();
+        $count = self::count();
+
+        $percent_left = round(($capacity - $count) / $capacity * 100);
+        if($percent_left > 30){
+            return 30;
+        }
+
+        return $percent_left;
+    }
+
 
 }

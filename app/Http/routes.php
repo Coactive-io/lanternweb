@@ -14,12 +14,16 @@ Use App\User;
 Route::get('/', function () {
     return view('index');
 });
+
 Route::get('login', function () {
     return view('login');
 });
 Route::post('sms', array('uses' => 'InboundSmsController@handle'));
 Route::get('phone',function(){
     return view('phone');
+});
+Route::get('hold-tight',function(){
+    return view('waiting');
 });
 
 Route::get('auth/github', 'Auth\AuthController@redirectToProvider');

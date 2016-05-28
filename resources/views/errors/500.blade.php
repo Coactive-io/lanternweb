@@ -13,7 +13,7 @@
 	<div class="row">
 		<div class="content col-md-offset-2 col-md-8">
 			<div class="main-text">
-				<p>Oops, the page you're looking for does not exist. You may want to go back.</p>
+				<p>Something's not quite right.  We're not sure what happened but we're working on making it right.</p>
 				<a href="/" class="nav-button">Go back home</a>
 			</div>
 		</div>
