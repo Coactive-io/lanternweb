@@ -377,3 +377,35 @@ input:last-child {
 	color: #fff;
 	text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+/*--- Brandon's Mess ---*/
+h3 {
+ 
+	margin: 0 0 10px 0;
+	color: #fff;
+}
+.press{
+	padding: 16px 32px;
+	width: auto;
+display: inline-block;
+}
+.panel {
+	background-color: #1A0F24;
+	border: 1px solid rgba(255,255,255,0.2);
+	padding: 32px;
+}
+textarea {
+	border-radius: 5px;
+	height: 171px;
+	resize: none;
+}
