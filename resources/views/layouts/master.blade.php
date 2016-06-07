@@ -86,7 +86,7 @@ Get in line to gain access to exclusive events." />
         			</ul>
         		</div>
         <div class="footer col-md-12">
-            <p>&copy; <?= date('Y'); ?> Lantern, LLC. All rights reserved. Made with <span style="color:#3ca69f;">&#9825;</span> in SATX. Need to <a href="/contact" style="color:#41BCB0;">Contact us?</a></p>
+            <p>&copy; <?= date('Y'); ?> Lantern. Made with <span style="color:#3ca69f;">&#9825;</span> in SATX. Need to <a href="/contact" style="color:#41BCB0;">Contact us?</a></p>
         </div>
         <!-- end footer -->
 
