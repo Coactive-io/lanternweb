@@ -23,6 +23,19 @@ Route::get('contact', function () {
     return view('contact');
 });
 
+Route::get('press', function () {
+    return view('press');
+});
+
+Route::get('deals', function () {
+    return view('deals');
+});
+
+Route::get('deal-view', function () {
+    return view('deal-view');
+});
+
+
 Route::post('sms', array('uses' => 'InboundSmsController@handle'));
 Route::get('phone',function(){
     return view('phone');

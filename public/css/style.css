@@ -377,3 +377,246 @@ input:last-child {
 	color: #fff;
 	text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+/*--- Brandon's Mess ---*/
+
+.btn-small {
+	border: 1px solid #42BCB0;
+	border-radius: 100px;
+	padding:4px 14px;
+	display: inline-block;
+	
+
+}
+
+img.deals-thumb {
+	border-radius: 4px;
+	max-height: 140px;
+}
+.deals-thumb-lg {
+	 background: url('https://process.filestackapi.com/AhTgLagciQByzXpFGRI0Az/blur=amount:6/HiPKaabhSqKL261Pj6Fe') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.deals-thumb-lg h3 {
+font-size: 32px;
+text-align: center;
+padding: 24px 0;
+}
+
+
+h3 {
+ 
+	margin: 0 0 10px 0;
+	color: #fff;
+}
+.press{
+	padding: 16px 32px;
+	width: auto;
+display: inline-block;
+}
+.panel {
+	overflow: hidden;
+	background-color: #1A0F24;
+	border: 1px solid rgba(255,255,255,0.2);
+	padding: 32px;
+}
+textarea {
+	border-radius: 5px;
+	height: 171px;
+	resize: none;
+}
+
+
+
+
+
+.panel-deals .deals-info {
+	background:;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	margin-bottom: 24px;
+	padding: 7px 0 0 0;
+	 
+}
+	.panel-deals .deals-info h2 {
+		font-size: 26px;
+		margin-bottom: 12px;
+	}
+	.panel-deals .deals-info p {
+		color: rgba(255,255,255,0.5);
+	}
+
+
+.panel-deals .deals-img {
+	background-color:;
+	padding:0;
+}
+
+.panel-deals {
+	color: #fff;
+	overflow: auto;
+	background-color: #1A0F24;
+	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 4px;
+	margin-bottom: 20px;
+	padding: 24px;
+}
+.panel-deals a {
+	color: #42BCB0;
+	margin: 0;
+ 
+}
+.panel-deals h2 {
+	font-size: 24px;
+	margin: 0;
+	padding: 0;
+}
+.panel-deals p {
+	font-size: 20px;
+	line-height: 24px;
+	margin-bottom: 12px;
+}
+
+
+
+.get {
+	background: #F8B642;
+	border-radius: 4px;
+	font-size: 20px;
+	font-weight: 600;
+}
+a.get {
+	color: #fff;
+}
+
+span {
+ 
+	font-weight: 600;
+ 
+ 
+}
+
+
+
+
+
+.panel-deals  ul {
+	margin-bottom:24px;
+	display: block;
+}
+
+
+
+/*--- Offer Alert ---*/
+.offer-link {
+	border: 1px solid red;
+	padding:12px;
+
+}
+
+
+
+
+ 
+
+
+
+
+.deal-panel {
+	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 8px;
+	overflow: hidden;
+	padding: 32px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.deal-panel p {
+	color: rgba(255,255,255,0.5);
+	font-size: 20px;
+}
+.deal-panel h2 {
+	color: #F8B642;
+	font-size: 28px;
+	margin-bottom: 24px;
+	line-height:0;
+}
+	.deal-panel h2 a {
+		color: #F8B642;		
+	}
+.deal-panel h3 {
+	color: rgba(255,255,255,0.5);
+	font-size: 20px;
+}
+.deal-panel img {
+	width: 100%;
+}
+	.deal-img  a:hover{
+		opacity: 0.5;
+	}
+.deal-img {
+	border-radius: 4px;
+	height: 160px;
+	overflow: hidden;
+	margin: 24px 0;
+}
+
+
+
+
+
+/*--- Panel List ---*/
+.panel-list {
+	overflow: hidden;
+	border: 1px solid rgba(255,255,255,0.2);
+	padding: 32px;
+}
+.panel-list p {
+	color: rgba(255,255,255,0.5);
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.panel-list img {
+	 width: 100%;
+}
+p.pill {
+display: inline-block;
+}
+
+
+/*--- Panels ---*/
+.panel-title {
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	margin-bottom: 24px;text-align: center;
+}
+.panel-title h2 {
+ 
+	font-size:32px;
+	margin-bottom: 4px;
+}
+.panel-title p {
+	color: rgba(255,255,255,0.5);
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.panel-title span {
+	color: #fff;
+}
+
+@media screen and (max-width: 988px) {
+   .panel-deals {
+		text-align:  ;
+	}
+}
