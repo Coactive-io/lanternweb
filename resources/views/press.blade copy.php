@@ -12,7 +12,7 @@
 		<div class="content col-md-offset-2 col-md-8">
 			<!-- main text -->
 			<div class="main-text">
-				<p>Lantern is a newest, and easiest way to discover your cities night fucking. Righ tnow currently only in San antonio, TX expanding to austin soon, suck butthol and uckerfuck</p>
+				<p>Lantern is the newest, and easiest way to discover your city's nightlife. Our members enjoy a better nightlife and exclusive offers from SA's best dining &amp; entertainment.  Lantern was crafted in San Antonio for San Antonians with more cities coming soon.</p>
 			</div>
 		</div>
 	</div>
