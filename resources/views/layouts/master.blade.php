@@ -18,7 +18,7 @@
 	<meta property="og:title"         content="Lantern:  Go out.  Discover your city." />
 	<meta property="og:description"   content="Introducing a new way to enjoy your city's nightlife.
 Get in line to gain access to exclusive events." />
-	<meta property="og:image"         content="https://getlantern.co/img/logo.gif" />
+	<meta property="og:image"         content="https://getlantern.co/img/logo.png" />
 	<!--END FACEBOOK META TAGS-->
 
 </head>

@@ -35,5 +35,5 @@
 @stop
 
 @section('scripts')
-	<script src="/js/social.js"></script>
+
 @endsection
