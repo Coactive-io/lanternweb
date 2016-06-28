@@ -52,8 +52,8 @@ class User extends Authenticatable
         $count = self::count();
 
         $percent_left = round(($capacity - $count) / $capacity * 100);
-        if($percent_left > 30){
-            return 30;
+        if($percent_left > env('CAPACITY_DISPLAYED')){
+            return env('CAPACITY_DISPLAYED');
         }
 
         return $percent_left;
